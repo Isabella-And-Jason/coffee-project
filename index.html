@@ -1,56 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Coffee</title>
 </head>
 <body>
-<div class="container">
-    <h1 class="d-flex justify-content-center border-bottom">Coffee!</h1>
-
-    <!--    <form>-->
-    <!--        <label for="roast-selection"></label>-->
-    <!--        <select id="roast-selection">-->
-    <!--            <option>light</option>-->
-    <!--            <option>medium</option>-->
-    <!--            <option>dark</option>-->
-    <!--        </select>-->
-    <!--        <input id="submit" type="submit" />-->
-    <!--    </form>-->
-
-    <!--    <table>-->
-    <!--        <thead>-->
-    <!--            <tr>-->
-    <!--                <th>ID</th>-->
-    <!--                <th>NAME</th>-->
-    <!--                <th>ROAST</th>-->
-    <!--            </tr>-->
-    <!--        </thead>-->
-    <!--        <tbody id="coffees"></tbody>-->
-
-    <form>
-        <div class="form-group">
-            <label for="roast-selection">Roast</label>
-            <select class="form-control" id="roast-selection">
-                <option>Light</option>
-                <option>Medium</option>
-                <option>Dark</option>
-            </select>
+    <div class="container">
+        <h1 class="d-flex justify-content-center border-bottom">Coffee!</h1>
+        <div class="row">
+            <div class="column">
+                <h1 id="coffee"></h1>
+                <p id="roast"></p>
+            </div>
+            <div class="column">
+                <form>
+                    <div class="form-group">
+                        <label for="roast-selection">Roast</label>
+                        <select class="form-control" id="roast-selection">
+                            <option>All</option>
+                            <option>Light</option>
+                            <option>Medium</option>
+                            <option>Dark</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="coffee-name">Coffee Name</label>
+                        <input type="text" class="form-control" id="coffee-name">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="coffee-name">Coffee Name</label>
-            <input type="text" class="form-control" id="coffee-name">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
+    </div>
+        <!--    <form>-->
+        <!--        <label for="roast-selection"></label>-->
+        <!--        <select id="roast-selection">-->
+        <!--            <option>light</option>-->
+        <!--            <option>medium</option>-->
+        <!--            <option>dark</option>-->
+        <!--        </select>-->
+        <!--        <input id="submit" type="submit" />-->
+        <!--    </form>-->
+
+        <!--    <table>-->
+        <!--        <thead>-->
+        <!--            <tr>-->
+        <!--                <th>ID</th>-->
+        <!--                <th>NAME</th>-->
+        <!--                <th>ROAST</th>-->
+        <!--            </tr>-->
+        <!--        </thead>-->
+        <!--        <tbody id="coffees"></tbody>-->
+
 
 
     <script src="main.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
 </body>
 </html>
