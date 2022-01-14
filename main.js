@@ -76,5 +76,5 @@ tbody.innerHTML = renderCoffees(coffees.reverse());
 
 // submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
-searchCoffee.addEventListener('keydown', searchCoffees);
+searchCoffee.addEventListener('keyup', searchCoffees);
 
