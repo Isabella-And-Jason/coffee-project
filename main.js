@@ -1,14 +1,25 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    // html += '<td>' + coffee.id + '</td>';
+    html += '<h1>' + coffee.name + '</h1>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
+
+// function renderCoffee(coffee) {
+//     var html = '<div id="coffees">';
+//     // html += '<td>' + coffee.id + '</td>';
+//     html += '<h1>' + coffee.name + '</h1>';
+//     html += '<p>' + coffee.roast + '</p>';
+//     html += '</div>';
+//
+//     return html;
+// }
+// console.log(renderCoffee);
 
 function renderCoffees(coffees) {
     var html = '';
@@ -48,7 +59,8 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-// document.getElementById("coffee").innerHTML = coffees.sort();
+// document.getElementById("all").addEventListener("click", renderCoffee);
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
