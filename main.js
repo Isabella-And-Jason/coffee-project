@@ -31,6 +31,18 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+function searchCoffees () {
+    var searchedCoffee = searchCoffee.value;
+    var filteredCoffees = [];
+
+    coffees.forEach(function (coffee) {
+        if (coffee.name === searchedCoffee) {
+            console.log(filteredCoffees.push(coffee));
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'Light', all: 'All'},
@@ -48,9 +60,6 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'Dark', all: 'All'},
     {id: 14, name: 'French', roast: 'Dark', all: 'All'},
 ];
-// var coffees2 = coffees.sort();
-
-// document.getElementById("all").addEventListener("click", renderCoffee);
 
 
 var tbody = document.querySelector('#coffees');
@@ -61,8 +70,5 @@ var searchCoffee = document.querySelector('#search-coffee');
 tbody.innerHTML = renderCoffees(coffees.reverse());
 
 submitButton.addEventListener('click', updateCoffees);
-searchCoffee.addEventListener('click', function() {
-    coffees.forEach(function (coffee) {
+searchCoffee.addEventListener('keypress', searchCoffees);
 
-    })
-});
