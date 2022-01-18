@@ -1,3 +1,16 @@
+body {
+    background-image: url("img/dark-wood.jpeg");
+}
+
+h1, h2, h4, p, input, select {
+    color: #FFCC33;
+    font-family: 'Raleway Dots', cursive;
+}
+
+.button-weight {
+    font-weight: bold;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
