@@ -2,8 +2,8 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<h1 class="d-flex" id="name">' + coffee.name + '</h1>';
-    html += '<p class="d-flex" id="roast">' + coffee.roast + '</p>';
+    html += '<h1 id="name">' + coffee.name + '</h1>';
+    html += '<p id="roast">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -82,13 +82,11 @@ console.log(coffees);
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
-var newRoastSelection = document.querySelector('#new-roast-selection');
 var roastSelection = document.querySelector('#roast-selection');
 var searchCoffee = document.querySelector('#search-coffee');
 
 tbody.innerHTML = renderCoffees(coffees.reverse());
 
-// submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 searchCoffee.addEventListener('keyup', searchCoffees);
 submitButton.addEventListener('click', addCoffee);
